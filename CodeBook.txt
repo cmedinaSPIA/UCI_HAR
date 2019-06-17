@@ -1,7 +1,8 @@
-Code Book
+CODE BOOK
 		
 		
-This project was based on Human Activity Recognition database built from the recordings of 30 subjects performing activities of daily living (ADL) while carrying a waist-mounted smartphone with embedded inertial sensors.
+This project was based on Human Activity Recognition database built from the recordings of 30 subjects performing activities 
+of daily living (ADL) while carrying a waist-mounted smartphone with embedded inertial sensors.
 URL: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 		
 It includes two main data sets:
@@ -72,7 +73,7 @@ LAYING
 1.2.4. Change the variable names to descriptive names
 
 
-2. HAR_means data set:  It was created based on HAR but including all means for each variable grouped by Subject and Activity
+2. HAR_means.txt:  It was created based on HAR but including all means for each variable grouped by Subject and Activity
 
 2.1. Variables
 
