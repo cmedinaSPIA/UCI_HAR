@@ -1,0 +1,138 @@
+Code Book
+		
+		
+This project was based on Human Activity Recognition database built from the recordings of 30 subjects performing activities of daily living (ADL) while carrying a waist-mounted smartphone with embedded inertial sensors.
+URL: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+		
+It includes two main data sets:
+
+1. HAR Data Set:  It was created merging the training and test with information provided for and the structure is as follows:
+
+1.1. Variables:
+1.1.1. Subject:  Identifies the each subject who performed the activity for each sample. 
+Range: 1 to 30
+
+1.1.2. Mean and Standard Deviation for the features selected in the original data.  
+In this case the data come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ 
+floating-point values, normalised and bounded within [-1,1].
+
+timeBodyAccelerationMeanX               timeBodyAccelerationMeanY              
+timeBodyAccelerationMeanZ               timeBodyAccelerationStandardDevX       
+timeBodyAccelerationStandardDevY        timeBodyAccelerationStandardDevZ       
+timeGravityAccelerationMeanX            timeGravityAccelerationMeanY           
+timeGravityAccelerationMeanZ            timeGravityAccelerationStandardDevX    
+timeGravityAccelerationStandardDevY     timeGravityAccelerationStandardDevZ    
+timeBodyAccelerationJerkMeanX           timeBodyAccelerationJerkMeanY          
+timeBodyAccelerationJerkMeanZ           timeBodyAccelerationJerkStandardDevX   
+timeBodyAccelerationJerkStandardDevY	  timeBodyAccelerationJerkStandardDevZ   
+timeBodyGyroMeanX                        timeBodyGyroMeanY                      
+timeBodyGyroMeanZ                        timeBodyGyroStandardDevX               
+timeBodyGyroStandardDevY                 timeBodyGyroStandardDevZ               
+timeBodyGyroJerkMeanX                    timeBodyGyroJerkMeanY                  
+timeBodyGyroJerkMeanZ                    timeBodyGyroJerkStandardDevX           
+timeBodyGyroJerkStandardDevY            timeBodyGyroJerkStandardDevZ           
+timeBodyAccelerationMagMean             timeBodyAccelerationMagStandardDev     
+timeGravityAccelerationMagMean          timeGravityAccelerationMagStandardDev  
+timeBodyAccelerationJerkMagMean         timeBodyAccelerationJerkMagStandardDev 
+timeBodyGyroMagMean                     timeBodyGyroMagStandardDev             
+timeBodyGyroJerkMagMean                 timeBodyGyroJerkMagStandardDev         
+frequencyBodyAccelerationMeanX          frequencyBodyAccelerationMeanY         
+frequencyBodyAccelerationMeanZ          frequencyBodyAccelerationStandardDevX  
+frequencyBodyAccelerationStandardDevY   frequencyBodyAccelerationStandardDevZ  
+frequencyBodyAccelerationMeanFrequencyX frequencyBodyAccelerationMeanFrequencyY
+frequencyBodyAccelerationMeanFrequencyZ frequencyBodyAccelerationJerkMeanX
+frequencyBodyAccelerationJerkMeanY            frequencyBodyAccelerationJerkMeanZ           
+frequencyBodyAccelerationJerkStandardDevX     frequencyBodyAccelerationJerkStandardDevY    
+frequencyBodyAccelerationJerkStandardDevZ     frequencyBodyAccelerationJerkMeanFrequencyX  
+frequencyBodyAccelerationJerkMeanFrequencyY   frequencyBodyAccelerationJerkMeanFrequencyZ  
+frequencyBodyGyroMeanX                        frequencyBodyGyroMeanY                       
+frequencyBodyGyroMeanZ                        frequencyBodyGyroStandardDevX                
+frequencyBodyGyroStandardDevY                 frequencyBodyGyroStandardDevZ                
+frequencyBodyGyroMeanFrequencyX               frequencyBodyGyroMeanFrequencyY              
+frequencyBodyGyroMeanFrequencyZ               frequencyBodyAccelerationMagMean             
+frequencyBodyAccelerationMagStandardDev       frequencyBodyAccelerationMagMeanFrequency    
+frequencyBodyAccelerationJerkMagMean          frequencyBodyAccelerationJerkMagStandardDev  
+frequencyBodyAccelerationJerkMagMeanFrequency frequencyBodyGyroMagMean                     
+frequencyBodyGyroMagStandardDev               frequencyBodyGyroMagMeanFrequency            
+frequencyBodyGyroJerkMagMean                  frequencyBodyGyroJerkMagStandardDev          
+frequencyBodyGyroJerkMagMeanFrequency        
+
+1.1.3.  Activity: Identifies the activity the subject is doing.  It has six possible values:
+WALKING
+WALKING_UPSTAIRS
+WALKING_DOWNSTAIRS
+SITTING
+STANDING
+LAYING
+
+1.2. Transformations 
+1.2.1. Merge data of training and test in one data set
+1.2.2. Extract only Subject, Activity, Mean and Standard Deviation data
+1.2.3. The Activity column was replaced by the label
+1.2.4. Change the variable names to descriptive names
+
+
+2. HAR_means data set:  It was created based on HAR but including all means for each variable grouped by Subject and Activity
+
+2.1. Variables
+
+2.1.1. Subject:  Identifies the each subject who performed the activity for each sample. 
+Range: 1 to 30
+
+2.1.2.  Activity: Identifies the activity the subject is doing.  It has six possible values:
+WALKING
+WALKING_UPSTAIRS
+WALKING_DOWNSTAIRS
+SITTING
+STANDING
+LAYING
+
+2.1.3. Mean Values for the Variables:  The means were calculated grouping by Subject and Activity
+
+floating-point values, normalised and bounded within [-1,1].
+
+
+timeBodyAccelerationMeanX               timeBodyAccelerationMeanY               
+timeBodyAccelerationMeanZ               timeBodyAccelerationStandardDevX       
+timeBodyAccelerationStandardDevY        timeBodyAccelerationStandardDevZ       
+timeGravityAccelerationMeanX            timeGravityAccelerationMeanY           
+timeGravityAccelerationMeanZ            timeGravityAccelerationStandardDevX    
+timeGravityAccelerationStandardDevY     timeGravityAccelerationStandardDevZ    
+timeBodyAccelerationJerkMeanX           timeBodyAccelerationJerkMeanY          
+timeBodyAccelerationJerkMeanZ           timeBodyAccelerationJerkStandardDevX   
+timeBodyAccelerationJerkStandardDevY	  timeBodyAccelerationJerkStandardDevZ   
+timeBodyGyroMeanX                        timeBodyGyroMeanY                      
+timeBodyGyroMeanZ                        timeBodyGyroStandardDevX               
+timeBodyGyroStandardDevY                 timeBodyGyroStandardDevZ               
+timeBodyGyroJerkMeanX                    timeBodyGyroJerkMeanY                  
+timeBodyGyroJerkMeanZ                    timeBodyGyroJerkStandardDevX           
+timeBodyGyroJerkStandardDevY            timeBodyGyroJerkStandardDevZ           
+timeBodyAccelerationMagMean             timeBodyAccelerationMagStandardDev     
+timeGravityAccelerationMagMean          timeGravityAccelerationMagStandardDev  
+timeBodyAccelerationJerkMagMean         timeBodyAccelerationJerkMagStandardDev 
+timeBodyGyroMagMean                     timeBodyGyroMagStandardDev             
+timeBodyGyroJerkMagMean                 timeBodyGyroJerkMagStandardDev         
+frequencyBodyAccelerationMeanX          frequencyBodyAccelerationMeanY         
+frequencyBodyAccelerationMeanZ          frequencyBodyAccelerationStandardDevX  
+frequencyBodyAccelerationStandardDevY   frequencyBodyAccelerationStandardDevZ  
+frequencyBodyAccelerationMeanFrequencyX frequencyBodyAccelerationMeanFrequencyY
+frequencyBodyAccelerationMeanFrequencyZ frequencyBodyAccelerationJerkMeanX
+frequencyBodyAccelerationJerkMeanY            frequencyBodyAccelerationJerkMeanZ           
+frequencyBodyAccelerationJerkStandardDevX     frequencyBodyAccelerationJerkStandardDevY    
+frequencyBodyAccelerationJerkStandardDevZ     frequencyBodyAccelerationJerkMeanFrequencyX  
+frequencyBodyAccelerationJerkMeanFrequencyY   frequencyBodyAccelerationJerkMeanFrequencyZ  
+frequencyBodyGyroMeanX                        frequencyBodyGyroMeanY                       
+frequencyBodyGyroMeanZ                        frequencyBodyGyroStandardDevX                
+frequencyBodyGyroStandardDevY                 frequencyBodyGyroStandardDevZ                
+frequencyBodyGyroMeanFrequencyX               frequencyBodyGyroMeanFrequencyY              
+frequencyBodyGyroMeanFrequencyZ               frequencyBodyAccelerationMagMean             
+frequencyBodyAccelerationMagStandardDev       frequencyBodyAccelerationMagMeanFrequency    
+frequencyBodyAccelerationJerkMagMean          frequencyBodyAccelerationJerkMagStandardDev  
+frequencyBodyAccelerationJerkMagMeanFrequency frequencyBodyGyroMagMean                     
+frequencyBodyGyroMagStandardDev               frequencyBodyGyroMagMeanFrequency            
+frequencyBodyGyroJerkMagMean                  frequencyBodyGyroJerkMagStandardDev          
+frequencyBodyGyroJerkMagMeanFrequency        
+
+2.2. Transformations 
+2.2.1. Based on HAR it was calculated doing the average of each column grouped by Subject and Activity
+ 
