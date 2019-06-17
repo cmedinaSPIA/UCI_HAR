@@ -2,6 +2,29 @@ UCI_HAR Project
 
 Description of run_analysis.R
 
+Based on this files
+
+- 'features_info.txt': Shows information about the variables used on the feature vector.
+
+- 'features.txt': List of all features.
+
+- 'activity_labels.txt': Links the class labels with their activity name.
+
+- 'train/X_train.txt': Training set.
+
+- 'train/y_train.txt': Training activities.
+
+- 'train/subject_train.txt: Subject who did the training
+
+- 'test/X_test.txt': Test set.
+
+- 'test/y_test.txt': Test activities.
+
+- 'test/subject_test.txt: Subject who did the test
+
+
+The script run_analysis.R consists of:
+
 1. Merges the training and the test sets to create one data set.
 It is using read.table function to read txt data files for training and test.
 The column names for variables were loaded in the same order as data.
@@ -27,7 +50,4 @@ library("data.table")
 library(stringr)
 library(dplyr)
 
-
-
-
- 
+For detailed description of the project.  See README.txt file in "getdata_projectfiles_UCI HAR Dataset.zip"
