@@ -1,3 +1,16 @@
+##############################################################################
+#
+# FILE
+#   run_analysis.R
+#
+# OVERVIEW
+#   This project was based on Human Activity Recognition database built from the recordings 
+#   of 30 subjects performing activities 
+#   of daily living (ADL) while carrying a waist-mounted smartphone with embedded inertial sensors.
+#   URL: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+#
+
+
 # 1. Merges the training and the test sets to create one data set.
 #
 # 1.1 Load training data and adding column names to each data set
@@ -107,4 +120,4 @@ colnames(HAR)<-HARCols
 #    activity and each subject
 library(dplyr)
 HAR_means<-summarise_all(group_by(HAR,Subject,Activity),mean)
-HAR_means
+write.table(HAR_means,"HAR_means.txt",row.name=FALSE)
